@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio — A Mesa do Mestre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-dice-6-fill"></i> A Mesa do Mestre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cardapio.html">Cardápio</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="cart-nav-btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <i class="bi bi-bag-fill"></i>
+            <span class="cart-count-badge" id="cartCount" style="display:none;">0</span>
+          </button>
+          <a href="contato.html" class="btn-medieval btn-medieval-red btn-navbar-reserva">
+            <i class="bi bi-bookmark-star"></i> Reserve Agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Cardápio Épico</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Cardápio</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="section-rune">✦ Iguarias Lendárias ✦</div>
+        <h2>Nosso Cardápio</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted mt-2">Pratos e bebidas inspirados nos maiores reinos da fantasia</p>
+      </div>
+
+      <ul class="nav menu-tabs" id="menuTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="entradas-tab" data-bs-toggle="tab" data-bs-target="#entradas" type="button" role="tab"><i class="bi bi-egg-fried"></i> Entradas</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="principais-tab" data-bs-toggle="tab" data-bs-target="#principais" type="button" role="tab"><i class="bi bi-cup-hot"></i> Pratos Principais</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="sobremesas-tab" data-bs-toggle="tab" data-bs-target="#sobremesas" type="button" role="tab"><i class="bi bi-cake"></i> Sobremesas</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab"><i class="bi bi-cup-straw"></i> Drinks</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab"><i class="bi bi-wine"></i> Bebidas</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- ENTRADAS -->
+        <div class="tab-pane fade show active" id="entradas" role="tabpanel">
+          <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Entrada</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=P%C3%A3o+do+Aventureiro" class="card-img-top" alt="Pão do Aventureiro">
+                <div class="card-body">
+                  <h5 class="card-title">Pão do Aventureiro</h5>
+                  <p class="card-text">Pão artesanal de fermentação natural com ervas finas, servido com manteiga de alho e mel da terra dos halflings.</p>
+                  <p class="card-price">R$ 19,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Entrada</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Sopa+do+Mago" class="card-img-top" alt="Sopa do Mago">
+                <div class="card-body">
+                  <h5 class="card-title">Sopa do Mago</h5>
+                  <p class="card-text">Creme de abóbora com gengibre e leite de coco, finalizado com sementes de abóbora tostadas e um toque de páprica defumada.</p>
+                  <p class="card-price">R$ 22,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Entrada</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Asas+do+Drag%C3%A3o" class="card-img-top" alt="Asas do Dragão">
+                <div class="card-body">
+                  <h5 class="card-title">Asas do Dragão</h5>
+                  <p class="card-text">Asinhas de frango marinadas em molho barbecue picante, assadas até crocância perfeita. Sirva-se com molho de queijo azul.</p>
+                  <p class="card-price">R$ 28,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Entrada</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Salada+%C3%89lfica" class="card-img-top" alt="Salada Élfica">
+                <div class="card-body">
+                  <h5 class="card-title">Salada Élfica</h5>
+                  <p class="card-text">Mix de folhas frescas, frutas vermelhas, nozes caramelizadas e queijo de cabra, regado com vinagrete balsâmico de mel.</p>
+                  <p class="card-price">R$ 18,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRATOS PRINCIPAIS -->
+        <div class="tab-pane fade" id="principais" role="tabpanel">
+          <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Principal</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Bife+do+B%C3%A1rbaro" class="card-img-top" alt="Bife do Bárbaro">
+                <div class="card-body">
+                  <h5 class="card-title">Bife do Bárbaro</h5>
+                  <p class="card-text">Corte nobre grelhado na pedra, servido com purê de batatas rústicas e molho de ervas da floresta encantada.</p>
+                  <p class="card-price">R$ 59,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Principal</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Risoto+do+Elfo" class="card-img-top" alt="Risoto do Elfo">
+                <div class="card-body">
+                  <h5 class="card-title">Risoto do Elfo</h5>
+                  <p class="card-text">Risoto cremoso de cogumelos selvagens com parmesão, trufas negras e um toque de vinho branco élfico.</p>
+                  <p class="card-price">R$ 49,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Principal</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Ensopado+do+An%C3%A3o" class="card-img-top" alt="Ensopado do Anão">
+                <div class="card-body">
+                  <h5 class="card-title">Ensopado do Anão</h5>
+                  <p class="card-text">Ensopado robusto de carne com vegetais, cerveja escura e ervas aromáticas, cozido lentamente em panela de ferro.</p>
+                  <p class="card-price">R$ 54,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Principal</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Costela+do+Rei" class="card-img-top" alt="Costela do Rei">
+                <div class="card-body">
+                  <h5 class="card-title">Costela do Rei</h5>
+                  <p class="card-text">Costela bovina assada por 12 horas ao molho barbecue artesanal, desmanchando. Acompanha farofa e vinagrete.</p>
+                  <p class="card-price">R$ 64,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOBREMESAS -->
+        <div class="tab-pane fade" id="sobremesas" role="tabpanel">
+          <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Sobremesa</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Torre+de+Gelo" class="card-img-top" alt="Torre de Gelo">
+                <div class="card-body">
+                  <h5 class="card-title">Torre de Gelo</h5>
+                  <p class="card-text">Sorvete artesanal de baunilha com calda de frutas azuis e cristais de açúcar, montado em forma de torre de mago.</p>
+                  <p class="card-price">R$ 24,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Sobremesa</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Bolo+do+Mestre" class="card-img-top" alt="Bolo do Mestre">
+                <div class="card-body">
+                  <h5 class="card-title">Bolo do Mestre</h5>
+                  <p class="card-text">Bolo de chocolate belga com recheio de caramelo salgado e cobertura de ganache, decorado com runas comestíveis.</p>
+                  <p class="card-price">R$ 29,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Sobremesa</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Pudim+da+Vov%C3%B3+Bruxa" class="card-img-top" alt="Pudim da Vovó Bruxa">
+                <div class="card-body">
+                  <h5 class="card-title">Pudim da Vovó Bruxa</h5>
+                  <p class="card-text">Pudim de leite condensado cremoso com calda de caramelo queimado, receita secreta passada por gerações de bruxas.</p>
+                  <p class="card-price">R$ 19,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Sobremesa</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Fruta+do+Deus" class="card-img-top" alt="Fruta do Deus">
+                <div class="card-body">
+                  <h5 class="card-title">Fruta do Deus</h5>
+                  <p class="card-text">Salada de frutas frescas com mel, hortelã, gengibre e iogurte cremoso. Uma sobremesa digna dos paladares divinos.</p>
+                  <p class="card-price">R$ 22,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DRINKS -->
+        <div class="tab-pane fade" id="drinks" role="tabpanel">
+          <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Drink</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Po%C3%A7%C3%A3o+de+Cura" class="card-img-top" alt="Poção de Cura">
+                <div class="card-body">
+                  <h5 class="card-title">Poção de Cura</h5>
+                  <p class="card-text">Suco natural de frutas vermelhas com gengibre e mel, servido em frasco de vidro estilizado com efeito de fumaça.</p>
+                  <p class="card-price">R$ 16,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Drink</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Fogo+de+Drag%C3%A3o" class="card-img-top" alt="Fogo de Dragão">
+                <div class="card-body">
+                  <h5 class="card-title">Fogo de Dragão</h5>
+                  <p class="card-text">Drink avermelhado com vodka, licor de pimenta, suco de romã e um toque de limão. Serve-se com borda de páprica.</p>
+                  <p class="card-price">R$ 18,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Drink</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Elixir+do+Mago" class="card-img-top" alt="Elixir do Mago">
+                <div class="card-body">
+                  <h5 class="card-title">Elixir do Mago</h5>
+                  <p class="card-text">Coquetel místico azul com gin, licor de blueberry, xarope de lavanda e água tônica. Brilha sob luz negra!</p>
+                  <p class="card-price">R$ 22,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Drink</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Sangue+de+Troll" class="card-img-top" alt="Sangue de Troll">
+                <div class="card-body">
+                  <h5 class="card-title">Sangue de Troll</h5>
+                  <p class="card-text">Drink encorpado de cor rubi com whisky, licor de cereja, bitter e um toque de laranja sanguínea.</p>
+                  <p class="card-price">R$ 19,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="tab-pane fade" id="bebidas" role="tabpanel">
+          <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Bebida</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Hidromel+do+Rei" class="card-img-top" alt="Hidromel do Rei">
+                <div class="card-body">
+                  <h5 class="card-title">Hidromel do Rei</h5>
+                  <p class="card-text">Hidromel artesanal levemente gaseificado, produzido com mel puro e fermentado lentamente. A bebida dos reis nórdicos.</p>
+                  <p class="card-price">R$ 14,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Bebida</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Cerveja+do+An%C3%A3o" class="card-img-top" alt="Cerveja do Anão">
+                <div class="card-body">
+                  <h5 class="card-title">Cerveja do Anão</h5>
+                  <p class="card-text">Cerveja artesanal escura e encorpada, com notas de café e chocolate. Uma verdadeira cerveja de minerador.</p>
+                  <p class="card-price">R$ 12,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Bebida</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=Vinho+%C3%89lfico" class="card-img-top" alt="Vinho Élfico">
+                <div class="card-body">
+                  <h5 class="card-title">Vinho Élfico</h5>
+                  <p class="card-text">Vinho branco seco e aromático, com notas de frutas brancas e flores. Servido levemente resfriado, como os elfos preferem.</p>
+                  <p class="card-price">R$ 18,90</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card card-medieval">
+                <div class="card-category">Bebida</div>
+                <img src="https://placehold.co/600x400/2B1B0E/C49A3C?text=%C3%81gua+da+Fonte" class="card-img-top" alt="Água da Fonte">
+                <div class="card-body">
+                  <h5 class="card-title">Água da Fonte</h5>
+                  <p class="card-text">Água mineral natural com gás ou sem gás, servida em garrafa de vidro com rodela de limão e hortelã fresca.</p>
+                  <p class="card-price">R$ 6,90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL PRICES IN GP -->
+  <section class="about-section bg-dark">
+    <div class="container text-center">
+      <div class="section-title">
+        <div class="section-rune">✦ Tabela de Conversão ✦</div>
+        <h2>Preços em Peças de Ouro</h2>
+        <div class="section-divider"></div>
+      </div>
+      <p>Na Mesa do Mestre, você pode pagar em <strong>Peças de Ouro (PO)</strong>!</p>
+      <p class="text-muted">1 PO = R$ 1. Consulte nosso tesoureiro para mais detalhes.</p>
+      <i class="bi bi-coin" style="font-size: 3rem; color: var(--dourado);"></i>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5><i class="bi bi-dice-6-fill"></i> A Mesa do Mestre</h5>
+          <p>Onde a Fantasia Encontra o Sabor — desde 2024 reunindo aventureiros ao redor da mesa.</p>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+            <a href="#"><i class="bi bi-discord"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <h5>Navegação</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="lore.html">Lore</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Horários</h5>
+          <ul class="footer-hours list-unstyled">
+            <li><span class="day">Seg-Qui</span><span class="time">17h - 23h</span></li>
+            <li><span class="day">Sex-Sáb</span><span class="time">17h - 02h</span></li>
+            <li><span class="day">Domingo</span><span class="time">14h - 22h</span></li>
+          </ul>
+          <p class="mt-3"><i class="bi bi-geo-alt"></i> Rua dos Elfos, 42 — Centro</p>
+          <p><i class="bi bi-telephone"></i> (11) 5555-4242</p>
+          <p><i class="bi bi-envelope"></i> contato@amesadomestre.com.br</p>
+        </div>
+        <div class="col-lg-3">
+          <h5>Newsletter</h5>
+          <div class="footer-newsletter">
+            <form id="newsletterForm2" class="input-group">
+              <input type="email" class="form-control" placeholder="Seu e-mail" required>
+              <button class="btn" type="submit"><i class="bi bi-send"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-rune">⚔ ✦ ⚔</div>
+        <p>&copy; 2026 A Mesa do Mestre.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART OFFCANVAS -->
+  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"><i class="bi bi-bag-fill"></i> Seu Inventário</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartEmpty" class="cart-empty"><i class="bi bi-backpack"></i><p>Seu inventário está vazio.</p></div>
+      <div id="cartItems"></div>
+    </div>
+    <div class="p-3 border-top" style="border-color: var(--marrom-claro) !important;">
+      <div class="d-flex justify-content-between mb-2">
+        <span class="total-label">Total:</span>
+        <span class="total-value" id="cartTotal">0 PO</span>
+      </div>
+      <button class="btn-medieval btn-medieval-gold w-100 text-center" id="checkoutBtn"><i class="bi bi-coin"></i> Finalizar Pedido</button>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast newsletter-toast" role="alert">
+      <div class="toast-header">
+        <i class="bi bi-bag-check me-2" style="color: var(--dourado);"></i>
+        <strong class="me-auto">Inventário</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body">Item adicionado ao inventário!</div>
+    </div>
+  </div>
+
+  <div id="xpContainer" class="xp-container">
+    <div class="xp-card">
+      <div class="xp-avatar"><i class="bi bi-person-fill"></i></div>
+      <div class="xp-name">Aventureiro</div>
+      <div class="xp-class" id="xpClass">Iniciante</div>
+      <div class="xp-level" id="xpLevel">Nv. 1</div>
+      <div class="xp-bar"><div class="xp-bar-fill" id="xpBarFill" style="width: 0%;"></div></div>
+      <div class="text-center mt-1"><small id="xpBarText" style="color: var(--cinza); font-size: 0.7rem;">0 / 100 XP</small></div>
+    </div>
+  </div>
+
+  <div class="dice-container">
+    <div class="dice-button" id="diceButton">D20</div>
+    <div class="dice-result" id="diceResult">20</div>
+    <div class="dice-tooltip">Role Iniciativa!</div>
+  </div>
+
+  <div class="music-player">
+    <div class="music-toggle" id="musicToggle"><i class="bi bi-music-note"></i></div>
+  </div>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/551155554242?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Mesa%20do%20Mestre" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
